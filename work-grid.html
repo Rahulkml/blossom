@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BLOSSOM - Gallery</title>
+  <meta content="Blossom Decors Gallery" name="description">
+  <meta content="Interior Design, Interior Trivandrum, Blossom Interior, Interior, Design, Curtains, Sofa, Blinds, Blinds Curtains, Blinds in Trivandrum, Interior Blinds, Design Gallery, Blinds Images" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo1.png" rel="icon">
+  <link href="assets/img/logo1.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:300,400,500,600,700" rel="stylesheet">
+
+  <!-- font awsome -->
+  <link href="/assets/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+  <style>
+    .gallery-title
+    {
+        font-size: 36px;
+        color: #a90039;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 70px;
+    }
+    .gallery-title:after {
+        content: "";
+        position: absolute;
+        width: 7.5%;
+        left: 46.5%;
+        height: 45px;
+        border-bottom: 1px solid #5e5e5e;
+    }
+    .filter-button
+    {
+        font-size: 18px;
+        border: 1px solid #a90039;
+        border-radius: 5px;
+        text-align: center;
+        color: #a90039;
+        margin-bottom: 5px;
+
+    }
+    .filter-button:hover
+    {
+        font-size: 18px;
+        border: 1px solid #a90039;
+        border-radius: 5px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #a90039;
+
+    }
+    .btn-default:active .filter-button:active
+    {
+        background-color: #a90039;
+        color: white;
+    }
+
+    .port-image
+    {
+        width: 100%;
+    }
+
+    .gallery_product
+    {
+        margin-bottom: 30px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+
+    if ($(".filter-button").removeClass("active")) {
+    $(this).removeClass("active");
+    }
+    $(this).addClass("active");
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header/Navbar ======= -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" href="index.html" style="font-family: 'Barlow Condensed';">BLOSSOM<span class="color-b"> Interiors</span> <span id="optionalstuff" class="color-b"> & Curtains</span></a>
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="work-grid.html">Our Works</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link " href="blog-grid.html">Blog</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item " href="property-single.html">Property Single</a>
+              <a class="dropdown-item " href="blog-single.html">Blog Single</a>
+              <a class="dropdown-item " href="agents-grid.html">Agents Grid</a>
+              <a class="dropdown-item " href="agent-single.html">Agent Single</a>
+            </div>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">Contact</a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <img id="optionalstuff" style="width: 5%;" src="assets/img/Blossom10.png">
+
+      <!-- <button type="button" class="btn btn-b-n navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+        <i class="bi bi-search"></i>
+      </button> -->
+
+    </div>
+    
+  </nav><!-- End Header/Navbar -->
+  <br>
+  <main id="main">
+
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">Our Amazing Properties</h1>
+              <span class="color-text-a">Grid Properties</span>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Our Works
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Intro Single-->
+
+
+    <div class="container">
+      <div class="row">
+        <div align="center">
+            <button class="btn btn-default filter-button" data-filter="all">All</button>
+            <button class="btn btn-default filter-button" data-filter="curtain">Curtain</button>
+            <button class="btn btn-default filter-button" data-filter="sofa">Sofa</button>
+            <button class="btn btn-default filter-button" data-filter="blinds">Blinds</button>
+            <button class="btn btn-default filter-button" data-filter="others">Others</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+            <img src="https://i.ibb.co/54ycR31/IMG-20220101-WA0056.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/ngxFTTq/IMG-20200818-WA0134.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/dJdrFYM/IMG-20200818-WA0126.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/DRXLB1x/IMG-20200827-WA0021.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/Xz1Dhm8/IMG-20220101-WA0039.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/K7K20SB/IMG-20200818-WA0135.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/6FnWxS2/IMG-20200818-WA0104.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/cNkhW0q/IMG-20200827-WA0025.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+            <img src="https://i.ibb.co/FDQGG7r/IMG-20211220-WA0028.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/LdFhyw5/IMG-20200818-WA0131.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/QkhQCRL/IMG-20200818-WA0097.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/Xz0w4KX/IMG-20200715-WA0117.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/gSyCrsS/IMG-20211220-WA0023.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/nsYfDnp/IMG-20200818-WA0101.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/ZHnxYk2/IMG-20200614-WA0183.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/Jn7KMyQ/IMG-20200715-WA0132.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/F5pfK0S/IMG-20211220-WA0021.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/ZLCBzSr/IMG-20200818-WA0130.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/r0xM5dm/IMG-20200818-WA0102.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/RP49sMr/IMG-20200715-WA0128.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/Q8fPkkF/IMG-20200605-WA0032.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/Z19MZG9/IMG-20200818-WA0105.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/CwQf2JM/IMG-20190921-WA0068.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/f1NpWKg/IMG-20200409-WA0202.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+            <img src="https://i.ibb.co/DWWRTWH/IMG-20191205-WA0043.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/sszNwZK/IMG-20200614-WA0134.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/m4fKYDT/IMG-20190921-WA0060.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/wdBWfXv/IMG-20200409-WA0147.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/yRsFb3n/IMG-20191205-WA0041.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/4MGwhsk/IMG-20200229-WA0013.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/J2T2L5c/IMG-20190921-WA0065.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/mGpQ6ss/IMG-20200409-WA0145.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/TvSqS2z/IMG-20191205-WA0040.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/6rV5kZf/IMG-20200229-WA0010.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/zHtL6Bg/IMG-20190921-WA0059.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/jTm61KW/IMG-20200409-WA0074.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/wyY31jc/IMG-20191205-WA0039.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/qRWxDCf/IMG-20200229-WA0019.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/99r4W1T/IMG-20190921-WA0057.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/DgTfHV7/IMG-20200409-WA0095.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/L9T8fDL/IMG-20191205-WA0037.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/w69WTXM/IMG-20200229-WA0018.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/vHrxTs1/IMG-20190921-WA0055.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/PQ5p1rd/IMG-20200409-WA0138.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/XkwQXFr/IMG-20191205-WA0033.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/ysK8ZPd/IMG-20200229-WA0008.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/bv45F9V/IMG-20190921-WA0053.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/71WDSwq/IMG-20200409-WA0110.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/qNVSgg3/IMG-20191205-WA0032.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/CvWmzpc/IMG-20190921-WA0076.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/rGSsTD1/IMG-20190921-WA0051.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/q0srtnR/IMG-20200312-184005.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/rfJWWTw/IMG-20191205-WA0026.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/NZDpb0Y/IMG-20190921-WA0061.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/D4wwbS8/IMG-20190921-WA0052.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter others">
+            <img src="https://i.ibb.co/yRb9bzT/IMG-20190921-WA0027.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/nQ5VtQ9/IMG-20191205-WA0024.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/YWD4s60/IMG-20190921-WA0075.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/qsnG9Xm/IMG-20190921-WA0050.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/qs1h96r/IMG-20191123-WA0074.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/dJxRZBY/IMG-20191015-WA0021.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/BfXQNk5/IMG-20190921-WA0047.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/w7DSKP8/IMG-20191123-WA0073.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/HFgYYXx/IMG-20191015-WA0018.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/wNCJwWD/IMG-20190921-WA0046.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/RprmBfr/IMG-20191123-WA0072.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/Kj18LtS/IMG-20190921-WA0074.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/Xzpkd2b/IMG-20190921-WA0045.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/ZxwJk3C/IMG-20191123-WA0071.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/Sc33djt/IMG-20190921-WA0070.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/hsbgK5j/IMG-20190921-WA0042.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/XxcLFfL/IMG-20191123-WA0070.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/dKSvThk/IMG-20190921-WA0067.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/NjqHs4V/IMG-20190921-WA0041.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/DbHqt32/IMG-20191123-WA0069.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/F4hfVpb/IMG-20190921-WA0066.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/3YgxZD3/IMG-20190921-WA0040.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/D5bS87w/IMG-20191123-WA0067.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/gzD53wZ/IMG-20190921-WA0064.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/MZPgCRJ/IMG-20190921-WA0036.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/PG5r5My/IMG-20191123-WA0066.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/1XNwWrR/IMG-20190921-WA0048.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/cxXXLBG/IMG-20190921-WA0035.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/CKW8T8T/IMG-20191123-WA0065.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/NSNsMp4/IMG-20190921-WA0043.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/t349yhS/IMG-20190921-WA0014.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/jy5sBjQ/IMG-20191123-WA0064.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/SVmPdRG/IMG-20190921-WA0038.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/nQTq6rT/IMG-20190921-WA0018.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/DRHfbsH/IMG-20191123-WA0063.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/zPgJ6rM/IMG-20190921-WA0034.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/6tRfNvY/IMG-20190921-WA0010.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/g3sv69d/IMG-20191123-WA0061.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/MVFtXC5/IMG-20190921-WA0032.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/7Qx5RzX/IMG-20210714-134911.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/7zFH2wB/IMG-20191123-WA0062.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/ysVwNV7/IMG-20190921-WA0030.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/S35xqbg/IMG-20191123-WA0059.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/z28r9YK/IMG-20190921-WA0029.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/y493txV/IMG-20210503-221214.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/qWvykGf/IMG-20191123-WA0060.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/5nJ8zrY/IMG-20190921-WA0025.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/crqwqKn/IMG-20210503-205530.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/5r0tD5K/IMG-20191123-WA0058.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/ZgmZNQn/IMG-20190921-WA0024.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/xsQ3v02/IMG-20200822-205945.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/4JxZMsx/IMG-20191123-WA0057.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/ZT4xLMx/IMG-20190921-WA0021.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/X7GjHcL/IMG-20200726-213900.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/6yGF5s6/IMG-20191123-WA0056.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter curtain">
+          <img src="https://i.ibb.co/bWVNPCX/IMG-20190921-WA0020.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter blinds">
+          <img src="https://i.ibb.co/nsvwr1S/IMG-20190921-WA0011.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/1fk0jDV/IMG-20191123-WA0055.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/QXh0bc7/IMG-20191123-WA0054.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/9vXtKBc/IMG-20191123-WA0053.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/0ccmN0D/IMG-20191123-WA0052.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/xSm8n8q/IMG-20191123-WA0050.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/jZFqbV3/IMG-20191123-WA0049.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/ZNGSqjF/IMG-20191118-WA0058.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sofa">
+          <img src="https://i.ibb.co/dbG3L7N/IMG-20191118-WA0055.jpg" style="object-fit: cover; width: 365px; height: 365px;" class="img-responsive">
+        </div>
+
+      </div>
+  </div>
+    
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <section class="section-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand" style="font-family: 'Barlow Condensed';">BLOSSOM Interiors & Curtains
+              </h3>
+              <hr>
+            </div>
+            <div class="w-body-a">
+              <div class="icon-box-content">
+                <p class="mb-1">
+                  Blossom Interiors
+                  <br> Vanchiyoor, Alamcode, Kerala 
+                </p>
+              </div>
+              <br>
+              <div class="icon-box-content">
+                <p class="mb-1">
+                  Blossom Warehouse
+                  <br> Ayilam, Attingal, Kerala
+                </p>
+              </div>
+              <br>
+            </div>
+            <div class="w-footer-a">
+              <ul class="list-unstyled">
+                <li class="color-a">
+                  <span class="color-text-a">Phone .</span> +91 70255 05967
+                </li>
+                <li class="color-a">
+                  <span class="color-text-a">Email .</span> blossomdecorsforyou@gmail.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-sm-12 col-md-4 section-md-t3">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">The Company</h3>
+            </div>
+            <div class="w-body-a">
+              <div class="w-body-a">
+                <ul class="list-unstyled">
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
+                  </li>
+                  <li class="item-list-a">
+                    <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <nav class="nav-footer">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">About</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Property</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Blog</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav> -->
+          <div class="socials-a">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              &copy; Copyright
+              <span class="color-a">Blossom</span> All Rights Reserved.
+            </p>
+          </div>
+          <div class="credits">
+
+            Designed by <a href="https://rahulrajendran.in/" target="_blank">Rahul Rajendran</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    var div = document.getElementById('preloader');
+    setTimeout(function () {div.remove();}, 2000);
+  </script>
+
+</body>
+
+</html>
